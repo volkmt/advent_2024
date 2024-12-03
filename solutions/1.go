@@ -59,7 +59,7 @@ func isSorted(slice []int) bool {
 }
 
 func main() {
-	var s1, s2, err = utils.ReadFileIntoSlices("C:/Code/advent_2024/data/1.txt", "   ")
+	var s1, s2, err = utils.ReadFileIntoTwoSlices("C:/Code/advent_2024/data/1.txt", "   ")
 	utils.CheckError(err)
 
 	t, err := calculateDistance(s1, s2)
