@@ -20,7 +20,7 @@ func ConvertToInt(s string) int {
 	return intValue
 }
 
-func ReadFileIntoSlices(fp string, d string) ([]int, []int, error) {
+func ReadFileIntoTwoSlices(fp string, d string) ([]int, []int, error) {
 	file, err := os.Open(fp)
 	CheckError(err)
 	defer file.Close()
