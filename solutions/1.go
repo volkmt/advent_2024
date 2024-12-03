@@ -35,6 +35,7 @@ func calculateDistance(s1, s2 []int) (int, error) {
 	}
 
 	// Calculate the sum of absolute differences
+	// skipped math library because math.Abs uses float64
 	sum := 0
 	for i := 0; i < minLength; i++ {
 		diff := s1[i] - s2[i]
@@ -58,7 +59,6 @@ func isSorted(slice []int) bool {
 }
 
 func main() {
-	// Example 1: Valid inputs
 	var s1, s2, err = utils.ReadFileIntoSlices("C:/Code/advent_2024/data/1.txt", "   ")
 	utils.CheckError(err)
 
